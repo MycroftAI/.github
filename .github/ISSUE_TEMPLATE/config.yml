@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Mycroft Community Support
+    url: https://community.mycroft.ai/
+    about: Please ask and answer questions on the Community Forums.
+  - name: Security Reporting
+    url: https://mycroft.ai/contact/
+    about: Please report security vulnerabilities here.
