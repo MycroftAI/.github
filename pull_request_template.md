@@ -6,12 +6,12 @@ If needed follow up with as much detail as required.
 
 ### Type of PR
 If your PR fits more than one category, there is a high chance you should submit more than one PR. Please consider this carefully before opening the PR.
-- [] Bugfix
-- [] Proposal for new feature
-- [] Implementation of feature on the roadmap
-- [] Refactor of code (without functional changes)
-- [] Documentation improvements
-- [] Test improvements
+_Either delete those that do not apply, or add an x between the square brackets like so: `- [x]`_
+- [ ] Bugfix
+- [ ] Feature implementation
+- [ ] Refactor of code (without functional changes)
+- [ ] Documentation improvements
+- [ ] Test improvements
 
 ### Testing
 How can someone reviewing this PR test that it is working properly? Is there appropriate test coverage for this change?
