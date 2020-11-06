@@ -45,19 +45,19 @@ https://guides.github.com/activities/forking/
 The majority of our technologies are written in Python, and this section presumes you are working on one of these projects. If you are looking at one of our non-Python repositories, please check the README or specific contributing guide for that project.
 
 #### Creating a Python virtual environment
-Rather than installing this directly onto your system, we strongly encourage the use of virtual environments. This creates an isolated Python environment allowing you to run everything using a specific version of Python, install different versions of dependencies, and when you're finished - delete everything quickly and easily.
+This creates an isolated Python environment just for this project, allowing you to work using a specific version of Python, and different versions of dependencies, without affecting the packages used by your operating system. And, when you're finished, you can delete the whole thing without breaking your computer!
 
 Again, there are many tutorials online for setting up a virtual environment including the Python documentation itself:
 https://docs.python.org/3/library/venv.html
 
-Most of the time, the following should work on regular Linux install using a bash shell:
+Most of the time, the following should work on Linux:
 ```
 cd /path/to/my/project     # Change to our working directory
 python3 -m venv .venv      # Create a virtual environment in .venv
 source .venv/bin/activate  # Activate our new virtual environment
 ```
 
-After activating the virtual environment your command prompt will be prepended to show the activated venv. So if your shell usually displays:
+After activating the virtual environment your command prompt may be prepended to show the activated venv. So if your shell usually displays:
 ```shell
 user@computer:~/my-project$
 ```
@@ -72,7 +72,7 @@ To deactivate the venv run the `deactivate` command.
 As mentioned above you can remove this virtual environment by simply deleting the `.venv` directory that we created it in.
 
 #### Running the setup script
-Most of our Python projects provide a `setup.py` file that contains the instructions for what's included and how it should be installed. This means that setup requires a single command:
+Most of our Python projects provide a `setup.py` file that contains the instructions for what's included and how it should be installed. This means that setting them up for development purposes can generally be done with a single command:
 
 ```shell
 python setup.py install    # Run the setup script
@@ -126,7 +126,7 @@ All functions and class methods that are expected to be called externally should
 
 ### Committing code
 
-Committed your code in logical units with each having a clear commit message is helpful for both the reviewers, and anyone looking at your code in the future (including yourself).
+Committing your code in logical units with each having a clear commit message is helpful for both the reviewers, and anyone looking at your code in the future (including yourself).
 
 #### Commit messages
 
@@ -179,7 +179,7 @@ These are broadly color coded in order to provide a quick indication as to the b
 | good first issue | Good issue for new contributors |
 | CLA: Yes | Author has signed CLA - see https://github.com/mycroftai/contributors |
 | CLA: Needed | Author has not yet signed CLA - please visit https://mycroft.ai/cla |
-| hacktoberfest | Special tag for Hacktoberfest |
+| hacktoberfest-accepted | Special tag for Hacktoberfest |
 | invalid | Special tag for Hacktoberfest - indicates spam PR |
 
 ### Reviewing PR's
