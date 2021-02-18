@@ -36,6 +36,9 @@ test_labels = features = [l for l in labels if 'test' in l.name.lower()]
 def print_pr_info(pr):
     print('- {} (#{}) by @{}'.format(pr.title, pr.number, pr.user.login))
 
+def print_author_link(author):
+    print('- [@{}](https://github.com/{})'.format(author, author))
+
 
 class ReleaseNotes:
     def __init__(self):
@@ -108,6 +111,11 @@ if release_notes.other:
     print('\n\n## Other changes')
     for pr in release_notes.other:
         print_pr_info(pr)
+
+if release_notes.authors:
+    print('\n\n## Contributors list')
+    for author in release_notes.authors:
+        print_author_link(author)
 
 print('\n\n## Numbers:')
 print('\tNumber of authors contributing to '
