@@ -34,8 +34,7 @@ test_labels = features = [l for l in labels if 'test' in l.name.lower()]
 
 
 def print_pr_info(pr):
-    print('## {} (#{}) by @{}'.format(pr.title, pr.number, pr.user.login))
-    print('')
+    print('- {} (#{}) by @{}'.format(pr.title, pr.number, pr.user.login))
 
 
 class ReleaseNotes:
@@ -87,27 +86,30 @@ for pr in pull_requests:
             break
 
 # Print all the different things
-if release_notes.bugfixes:
-    print('# Bugfixes')
-    for pr in release_notes.bugfixes:
-        print_pr_info(pr)
+print('# {}'.format(repo_name))
 
 if release_notes.features:
-    print('\n\n# Features')
+    print('\n\n## Features')
     for pr in release_notes.features:
         print_pr_info(pr)
 
+if release_notes.bugfixes:
+    print('\n\n## Bugfixes')
+    for pr in release_notes.bugfixes:
+        print_pr_info(pr)
+
+
 if release_notes.tests:
-    print('\n\n# Tests')
+    print('\n\n## Tests')
     for pr in release_notes.tests:
         print_pr_info(pr)
 
 if release_notes.other:
-    print('\n\n# Other changes')
+    print('\n\n## Other changes')
     for pr in release_notes.other:
         print_pr_info(pr)
 
-print('# Numbers:')
+print('\n\n## Numbers:')
 print('\tNumber of authors contributing to '
       'this release: {}'.format(len(release_notes.authors)))
 print('\tFeatures: {}'.format(len(release_notes.features)))
